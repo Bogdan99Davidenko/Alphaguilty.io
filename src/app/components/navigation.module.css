@@ -33,11 +33,11 @@
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('/fonts/space_grotesk.ttf') format('truetype');
+  src: url('../../../public/fonts/space_grotesk.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
+/* src: url('/fonts/space_grotesk.ttf') format('truetype'); */
 .navContainer {
   display: flex;
   flex-direction: column;
