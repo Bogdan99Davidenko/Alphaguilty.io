@@ -1,95 +1,52 @@
-import Image from 'next/image'
+'use client'
+import React, { useState } from 'react';
 import styles from './page.module.css'
+import Nav from './components/Navigation';
+import StartNewProject from './components/startNewProject';
+import ProjectDetails from './components/projectDetails';
+import CreateProject from './components/createProject';
+import AllInfo from './components/allInfo';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+const Home = () => {
+  
+  const [currentStep, setCurrentStep] = useState(1);
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+  const goToNextStep = () => {
+    setCurrentStep((prevStep) => prevStep + 1);
+  };
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+  const goToPreviousStep = () => {
+    setCurrentStep((prevStep) => prevStep - 1);
+  };
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+  const renderStep = () => {
+    switch (currentStep) {
+      case 1:
+        return <StartNewProject goToNextStep={goToNextStep} />;
+      case 2:
+        return <ProjectDetails goToNextStep={goToNextStep} goToPreviousStep={goToPreviousStep} />;
+      case 3:
+        return <CreateProject goToNextStep={goToNextStep} goToPreviousStep={goToPreviousStep} />;
+      case 4:
+        return <AllInfo goToPreviousStep={goToPreviousStep}/>
+      default:
+        return null;
+    }
+  };
+  
+    return (
+      <main className={styles.main}>
+          <div className={styles.navigation}>
+            <Nav currentStep={currentStep}/>
+            <div className={styles.circleVector}>
+              <div className={styles.vector}></div>
+            </div>
+          </div>
+          <div className={styles.content}>
+            {renderStep()}
+          </div>
+      </main>
+    )
+};
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home

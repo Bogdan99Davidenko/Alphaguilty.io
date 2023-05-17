@@ -1,0 +1,130 @@
+/* @font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/space_grotesk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.ul_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 42.49px;
+  margin-left: 42px;
+  width: 137px;
+  height: 114.72px;
+}
+
+@media (max-width: 361px) {
+  .ul_block{
+    display: flex;
+    flex-direction: row;
+    
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .ul_block li p {
+    display: none;
+  }
+} */
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/space_grotesk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 42.49px;
+  margin-left: 42px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.active_dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #ffffff;;
+}
+
+.completedDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #007bff;
+}
+
+.normalStep p {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.activeStep p {
+  color: #ffffff;
+}
+
+.completedStep {
+  color: #007bff;
+}
+
+.line {
+  width: 2px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-left: 4px;
+}
+
+.activeLine {
+  width: 2px;
+  height: 25px;
+  background-color: #007bff;
+  margin-left: 4px;
+}
+
+.normalLine {
+  width: 2px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 4px;
+}
+
+@media (max-width: 361px) {
+  .navContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+  }
+
+  .step p {
+    display: none;
+  }
+
+  .navContainer .line {
+    display: none;
+  }
+}
+

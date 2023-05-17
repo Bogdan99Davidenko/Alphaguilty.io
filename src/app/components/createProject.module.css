@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/space_grotesk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.p_header {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #2B8CE6;
+}
+
+.header_text {
+    margin-top: 8px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.workers_buttons {
+    display: flex;
+    flex-direction: row;
+    width: 279px;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.workers_buttons button {
+    display: flex;
+    border: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 10px;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background: rgba(250, 250, 250, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.workers_buttons input {
+    display: flex;
+    width: 151px;
+    flex-direction: row;
+    text-align: center;
+    padding: 12px 16px;
+    gap: 10px;
+    background: #101313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+}
+.product_launch {
+    margin-top: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.radio_button {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.labels {
+    margin-top: 17px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.email {
+    margin-top: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.input {
+    box-sizing: border-box;
+    margin-top: 16px;
+    width: 680px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none
+}
+
+.button_back {
+    display: flex;
+    border: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 10px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    width: 120px;
+    height: 48px;
+    margin-right: 32px;
+    background: rgba(250, 250, 250, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-top: 28px;
+}
+
+.button_create {
+    box-sizing: border-box;
+    margin-top: 28px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 10px;
+
+    width: 328px;
+    height: 48px;
+
+    background: #2B8CE6;
+    border-radius: 10px;
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+
+    text-align: center;
+
+    color: #101313;
+}
+
+.bottom_buttons {
+    display: flex;
+    flex-direction: row;
+
+}
+
+@media (max-width: 361px) {
+    .p_header {
+        font-size: 14px;
+    }
+
+    .header_text {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .workers_buttons {
+        width: 95%;
+    }
+
+    .workers_buttons input {
+        width: 200px;
+        height: 48px;
+    }
+
+    .input {
+        width: 95%;
+    }
+
+    .button_back {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 24px;
+        gap: 10px;
+        margin-right: 16px;
+        width: 156.5px;
+        height: 48px;
+
+        background: rgba(250, 250, 250, 0.1);
+        backdrop-filter: blur(10px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 10px;
+    }
+
+    .button_create {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 156.5px;
+        height: 48px;
+        background: #2B8CE6;
+        border-radius: 10px;
+    }
+}
