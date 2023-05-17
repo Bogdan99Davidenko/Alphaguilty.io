@@ -16,7 +16,7 @@
   width: 260px;
   min-width: 200px;
   height: 100vh;
-  background: #101313;
+  /* background: #101313; */
   box-shadow: 1px 0px 0px #2D3232;
 }
 
@@ -27,9 +27,9 @@
 
 .vector {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   width: 291px;
-  height: 156px;
+  height: 80px;
   left: -16px;
   bottom: 0px;
   background: linear-gradient(280.87deg, #87F696 20.45%, #00FFFF 41.25%, #9C16EF 72.03%, #4200FF 94.43%);
@@ -39,10 +39,11 @@
 
 .circleVector {
   width: 270px;
-  height: 270px;
+  height: 80px;
+  position: absolute;
+  bottom: 0em;
   left: -5px;
-  top: 20px;
-  background: radial-gradient(50% 50% at 50% 50%, #101313 38.02%, rgba(16, 19, 19, 0) 100%);
+  background: radial-gradient(70% 50% at 70% 50%, #101313 38.02%, rgba(16, 19, 19, 0) 100%);
 } 
 
 .button_add {
